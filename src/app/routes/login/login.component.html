@@ -1,0 +1,81 @@
+<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+  <div class="container">
+    <div class="navbar-header" nz-row>
+      <a class="navbar-brand" nz-col [nzOffset]="5" href="###"></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Top content -->
+<div class="top-content">
+  
+    <div class="inner-bg">
+        <div class="container">
+            <div nz-row>
+                <div nz-col [nzSpan]="6" [nzOffset]="5">
+                    <h1><strong>Bootstrap</strong> Login Form</h1>
+                    <div class="description">
+                      <p>
+                        This is a free responsive login form made with Bootstrap. 
+                        Download it on <a href="#"><strong>AZMIND</strong></a>, customize and use it as you like!
+                      </p>
+                    </div>
+                </div>
+                <div nz-col [nzSpan]="5" [nzOffset]="1">
+                  <nz-spin [nzSpinning]="_isSpinning" [nzTip]="'登录中...'">
+                    <div class="form-top">
+                      <div class="form-top-left">
+                        <h3>Log in now</h3>
+                          <p>Fill in the form below to get instant access:</p>
+                      </div>
+                      <div class="form-top-right">
+                        <i class="fa fa-pencil"></i>
+                      </div>
+                    </div>
+                    <div class="form-bottom">
+                      <form nz-form [formGroup]="loginForm" class="login-form" (ngSubmit)="_submitForm()">
+                        <div nz-form-item>
+                          <div nz-form-control nzHasFeedback>
+                            <nz-input formControlName="account" [nzPlaceHolder]="'Account'" [nzSize]="'large'">
+                              <ng-template #prefix>
+                                <i class="anticon anticon-user"></i>
+                              </ng-template>
+                            </nz-input>
+                            <div nz-form-explain *ngIf="loginForm.get('account').touched&&loginForm.hasError('required','account')">请输入账号</div>
+                            <div nz-form-explain *ngIf="loginForm.get('account').dirty&&loginForm.hasError('accountValid','account')">账号只能为字母或数字</div>
+                          </div>
+                        </div>
+                        <div nz-form-item>
+                          <div nz-form-control nzHasFeedback>
+                            <nz-input formControlName="password" [nzType]="'password'" [nzPlaceHolder]="'Password'" [nzSize]="'large'">
+                              <ng-template #prefix>
+                                <i class="anticon anticon-lock"></i>
+                              </ng-template>
+                            </nz-input>
+                            <div nz-form-explain *ngIf="loginForm.get('password').touched&&loginForm.hasError('required','password')">请输入密码</div>
+                            <div nz-form-explain *ngIf="loginForm.get('password').dirty&&loginForm.hasError('minlength','password')">密码长度至少为6位</div>
+                          </div>
+                        </div>
+                        <div nz-form-item>
+                          <div nz-form-control>
+                            <label nz-checkbox formControlName="remember">
+                              <span>Remember me</span>
+                            </label>
+                            <a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
+                            <button nz-button class="login-form-button" [nzType]="'primary'" [nzSize]="'large'">Log in</button>
+                            
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </nz-spin>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="backstretch">
+  <img src="../../../assets/img/1.jpg">
+</div>
+
