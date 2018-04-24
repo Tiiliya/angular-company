@@ -1,3 +1,4 @@
+import { HomeModule } from './routes/home/home.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,6 @@ import { ErrorComponent } from './routes/error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent,
     ErrorComponent
   ],
@@ -24,7 +24,8 @@ import { ErrorComponent } from './routes/error/error.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NgZorroAntdModule.forRoot(),
-    RoutingModule
+    HomeModule,
+    RoutingModule,
   ],
   bootstrap: [AppComponent]
 })
