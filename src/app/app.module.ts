@@ -10,6 +10,8 @@ import { RoutingModule } from './routes/routing.module';
 import { HomeComponent } from './routes/home/home.component';
 import { LoginComponent } from './routes/login/login.component';
 import { ErrorComponent } from './routes/error/error.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { ErrorComponent } from './routes/error/error.component';
   imports: [
     BrowserModule,
     FormsModule,
+    NgxEchartsModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

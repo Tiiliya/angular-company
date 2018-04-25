@@ -12,6 +12,7 @@ header{
 }
 .type{
     width:100%;
+    overflow: hidden;
     &>li{
         width:25%;
         padding-right: 25px;
@@ -64,5 +65,77 @@ header{
                 background: @orange;
             }
         }
+    }
+}
+.part1-chart{
+    width:70%;
+
+}
+.part2-chart{
+    height: 300px;
+}
+.complete{
+    float: right;
+    width:25%;
+    font-size: 14px;
+    &>p{
+        text-align: center;
+        font-weight: bold;
+    }
+    li{
+        color:#000;
+        padding: 10px 0;
+        p{
+            text-align: left;
+            span{
+                float: right;
+            }
+        }
+        .process{
+            height: 8px;
+            background:@gray-bg;
+            p{
+                height: 8px;
+            }
+        }
+        &:nth-child(1){
+            .process p{
+                background: @blue;
+            }
+        }
+        &:nth-child(2){
+            .process p{
+                background: @red;
+            }
+        }
+        &:nth-child(3){
+            .process p{
+                background: @green;
+            }
+        }
+        &:nth-child(4){
+            .process p{
+                background: @orange;
+            }
+        }
+    }
+}
+
+:host ::ng-deep{
+    .part1{
+        .ant-card-body{
+            border-top: 2px solid #c3c3c3;
+        }
+    }
+    .part2-list{
+        .ant-card-head{
+            border-top: 2px solid @blue;
+        }
+    }
+    .part2-cart{
+        .ant-card-head{
+            border-top: 2px solid #3c8dbc;   
+        }
+        
     }
 }
