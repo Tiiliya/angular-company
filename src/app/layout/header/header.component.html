@@ -1,1 +1,84 @@
-<i class="anticon trigger" [class.anticon-menu-fold]="!flag" [class.anticon-menu-unfold]="flag" (click)="slide()"></i>
+<div>
+  <div class="slide">
+    <i class="anticon trigger" [class.anticon-menu-fold]="!flag" [class.anticon-menu-unfold]="flag" (click)="slide()"></i>
+  </div>
+
+  <ul class="status">
+      <!-- message -->
+    <li class="message">
+      <nz-popover [nzTitle]="'You have 4 messages'" [nzTrigger]="'click'" [nzPlacement]="'bottomRight'">
+        <nz-badge [nzCount]="4" nz-popover>
+          <ng-template #content>
+            <nz-avatar nzIcon="message" [nzShape]="'circle'"></nz-avatar>
+          </ng-template>
+        </nz-badge>
+        <ng-template #nzTemplate>
+          <ul>
+            <li *ngFor="let item of messages" class="message-list">
+              <p><img src="../../assets/img/user2-160x160.jpg" alt=""></p>
+              <p><i class="anticon anticon-clock-circle-o"></i> {{item}}</p>
+              <div>
+                <p><b>Support Team</b></p>
+                <p>Why not buy a new awesome theme?</p>
+              </div>
+            </li>
+          </ul>
+        </ng-template>
+      </nz-popover>
+    </li>
+    <!-- notice -->
+    <li class="notice">
+      <nz-popover [nzTitle]="'You have 4 notification'" [nzTrigger]="'click'" [nzPlacement]="'bottomRight'">
+        <nz-badge [nzCount]="4" nz-popover>
+          <ng-template #content>
+            <nz-avatar nzIcon="notification" [nzShape]="'circle'"></nz-avatar>
+          </ng-template>
+        </nz-badge>
+        <ng-template #nzTemplate>
+          <ul>
+            <li *ngFor="let item of notice" class="notice-list">
+              <p><i class="anticon" [class]='item.icon' [style.color]="item.color"></i> 5 new members joined today</p>
+            </li>
+          </ul>
+        </ng-template>
+      </nz-popover>
+    </li>
+    <!-- tasts -->
+    <li class="tasks">
+      <nz-popover [nzTitle]="'You have 4 messages'" [nzTrigger]="'click'" [nzPlacement]="'bottomRight'">
+        <nz-badge [nzCount]="5" nz-popover>
+          <ng-template #content>
+            <nz-avatar nzIcon="flag" [nzShape]="'circle'"></nz-avatar>
+          </ng-template>
+        </nz-badge>
+        <ng-template #nzTemplate>
+          <ul>
+            <li *ngFor="let item of tasks" class="task-list">
+              <p>
+                <span>Design some buttons</span>
+                <span style="float: right;">{{item.width}}</span>
+              </p>
+              <div class="process">
+                  <p [style.width]="item.width" [style.background]="item.color"></p>
+              </div>
+            </li>
+          </ul>
+        </ng-template>
+      </nz-popover>
+    </li>
+    <!-- user -->
+    <li class="user">
+      <img src="../../assets/img/user2-160x160.jpg" alt="">
+      <span>Alexander Pierce</span>
+    </li>
+    <!-- setting -->
+    <li class="setting">
+      <nz-badge [nzCount]="0">
+        <ng-template #content>
+          <nz-avatar nzIcon="setting" [nzShape]="'circle'"></nz-avatar>
+        </ng-template>
+      </nz-badge>
+
+    </li>
+  </ul>
+</div>
