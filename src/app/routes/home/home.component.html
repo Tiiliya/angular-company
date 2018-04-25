@@ -2,22 +2,17 @@
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate" [nzWidth]="230">
     <app-menu [flag]="isCollapsed"></app-menu>
   </nz-sider>
+
   <nz-layout>
     <nz-header style="background: #fff; padding:0;">
       <app-header [flag]="isCollapsed" (triggerSlide)="slide()"></app-header>
     </nz-header>
-    <nz-content style="margin:0 16px;">
-      <nz-breadcrumb style="margin:16px 0;">
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-      </nz-breadcrumb>
-      <div style="padding:24px; background: #fff; min-height: 360px;">
-        Bill is a cat.
-      </div>
+
+    <nz-content>
+      <router-outlet></router-outlet>
     </nz-content>
+    
     <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
   </nz-layout>
+
 </nz-layout>
-<ng-template #trigger>
-  <i class="anticon anticon-up"></i>
-</ng-template>

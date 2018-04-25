@@ -3,7 +3,13 @@ import { Component, TemplateRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: `./home.component.html`,
-  styleUrls  : ['./home.component.less']
+  styles : [`
+      :host ::ng-deep .ant-layout-header{
+        height: 50px;
+        line-height: 50px;
+        background:#3c8dbc !important;
+      }
+  `]
 })
 export class HomeComponent {
   isCollapsed = false;

@@ -5,6 +5,8 @@ import { HeaderModule } from '../../layout/header/header.module';
 import { MenuModule } from "../../layout/menu/menu.module";
 import { SidebaModule } from "../../layout/sidebar/sidebar.module";
 import { NgZorroAntdModule } from "ng-zorro-antd";
+import { MainComponent } from './main/main.component';
+import { MainModule } from './main/main.module';
 
 @NgModule({
     imports: [
@@ -12,6 +14,7 @@ import { NgZorroAntdModule } from "ng-zorro-antd";
         HeaderModule,
         MenuModule,
         SidebaModule,
+        MainModule,
         HomeRoutingModule,
     ],
     declarations: [

@@ -1,0 +1,68 @@
+@import '../../../layout/style/common.less';
+
+header{
+    margin-bottom: 15px;
+    p{
+        span{
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    }
+}
+.type{
+    width:100%;
+    &>li{
+        width:25%;
+        padding-right: 25px;
+        box-sizing: border-box;
+        float: left;
+        margin-bottom: 15px;
+        div{
+            height: 90px;
+            background:#fff;
+            border-radius: 2px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            span{
+                width:90px;
+                height: 90px;
+                float: left;
+                color:#fff;
+                text-align: center;
+                line-height: 90px;
+                font-size: 40px;
+                margin-right: 10px;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+            }
+            p:nth-child(2){
+                color:#000;
+                padding-top:10px;
+            }
+            p:nth-child(3){
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+        &.cpu{
+            span{
+                background:@blue;
+            }
+        }
+        &.likes{
+            span{
+                background: @red;
+            }
+        }
+        &.sales{
+            span{
+                background:@green;
+            }
+        }
+        &.new{
+            span{
+                background: @orange;
+            }
+        }
+    }
+}
