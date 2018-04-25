@@ -1,3 +1,4 @@
+import { ChatModule } from './../../../components/chat/char.module';
 import { NgModule } from "@angular/core";
 import { NgZorroAntdModule } from "ng-zorro-antd";
 import { MainComponent } from './main.component';
@@ -8,7 +9,8 @@ import { CommonModule } from '@angular/common';
     imports: [
         CommonModule,
         NgZorroAntdModule,  //不确定是不是这样写
-        NgxEchartsModule
+        NgxEchartsModule,
+        ChatModule
     ],
     declarations: [
         MainComponent

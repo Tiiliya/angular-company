@@ -1,0 +1,47 @@
+<nz-card style="width:40%;float: left;" class="chat-talk">
+  <ng-template #title>
+    <div class="right">
+      <i class="slide"></i>
+      <i class="friends"></i>
+      <i class="close"></i>
+    </div>
+    Direct Chat
+    <nz-tooltip [nzTitle]="'3 new messages'">
+      <nz-badge [nzCount]="3" nz-tooltip class="messages"></nz-badge>
+    </nz-tooltip>
+  </ng-template>
+  <ng-template #body>
+    <div class="chat-content">
+      <ul class="chat-list">
+        <li class="talk">
+          <p><span class="name">Alexander Pierce</span>23 Jan 2:00 pm</p>
+          <div>
+            <img src="../../../assets/img/user1-128x128.jpg" alt="">
+            <p>
+              Is this template really for free? That's unbelievable!
+              <i class="anticon anticon-caret-left"></i>
+            </p>
+          </div>
+        </li>
+        <li class="talk talk-right">
+            <p><span class="name">Alexander Pierce</span>23 Jan 2:00 pm</p>
+            <div>
+              <img src="../../../assets/img/user3-128x128.jpg" alt="">
+              <p>
+                Is this template really for free? That's unbelievable!
+                <i class="anticon anticon-caret-right"></i>
+              </p>
+            </div>
+        </li>
+      </ul>
+      <div class="send-mess">
+          <nz-input [(ngModel)]="send" [nzPlaceHolder]="'Type Message'" [nzSize]="'large'">
+              <ng-template #addOnAfter>
+                <span class="send">Send</span>
+              </ng-template>
+          </nz-input>
+          
+      </div>
+    </div>
+  </ng-template>
+</nz-card>
