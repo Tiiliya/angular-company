@@ -7,6 +7,7 @@ import { SidebaModule } from "../../layout/sidebar/sidebar.module";
 import { NgZorroAntdModule } from "ng-zorro-antd";
 import { MainComponent } from './main/main.component';
 import { MainModule } from './main/main.module';
+import { TabsModule } from "../../components/tabs/tabs.module";
 
 @NgModule({
     imports: [
@@ -15,6 +16,7 @@ import { MainModule } from './main/main.module';
         MenuModule,
         SidebaModule,
         MainModule,
+        TabsModule,
         HomeRoutingModule,
     ],
     declarations: [

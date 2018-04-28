@@ -1,4 +1,4 @@
-import { ChatModule } from './../../../components/chat/char.module';
+import { ChatModule } from './../../../components/chat/chat.module';
 import { NgModule } from "@angular/core";
 import { NgZorroAntdModule } from "ng-zorro-antd";
 import { MainComponent } from './main.component';
